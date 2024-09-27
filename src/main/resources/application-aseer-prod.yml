@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://pgr-l4vk18q90r2c2b3s.pgsql.me-central-1.rds.aliyuncs.com:5432/aseer
+    username: c##xstrm
+    password: C33##M89tD
+    driver-class-name: org.postgresql.Driver
