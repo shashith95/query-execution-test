@@ -30,7 +30,7 @@ public class QueryExecutionTestApplication implements CommandLineRunner {
 		jdbcTemplate.execute(query);
 		log.info("Query execution completed");
 		long end = System.currentTimeMillis();
-		log.info("Time taken to execute the query: {} minutes", (end - start) / 60000);
+		log.info("Time taken to execute the query: {} minutes", (end - start) / 60000.0);
 	}
 
 	private String readQueryFromFile() throws IOException {
