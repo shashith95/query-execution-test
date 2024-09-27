@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: query-execution-test
+
+  datasource:
+    url: jdbc:postgresql://172.15.100.240:5432/dev_postgres
+    username: rf_empi
+    password: devpg123
+    driver-class-name: org.postgresql.Driver
