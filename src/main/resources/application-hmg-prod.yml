@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//10.201.217.122:1521/VIDA4PDB.hmg.local
+    username: c##xstrm
+    password: p08642xs
+    driver-class-name: oracle.jdbc.OracleDriver

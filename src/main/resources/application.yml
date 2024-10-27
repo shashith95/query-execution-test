@@ -2,7 +2,7 @@ spring:
   application:
     name: query-execution-test
   profiles:
-    active: aseer-prod
+    active: hmg-prod
 
 logging:
   level:

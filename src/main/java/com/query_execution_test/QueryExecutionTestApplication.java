@@ -17,6 +17,7 @@ import java.nio.file.Files;
 @RequiredArgsConstructor
 public class QueryExecutionTestApplication implements CommandLineRunner {
 	private final JdbcTemplate jdbcTemplate;
+	private final QueryServiceImpl queryService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(QueryExecutionTestApplication.class, args);
@@ -24,13 +25,18 @@ public class QueryExecutionTestApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		String query = readQueryFromFile();
-		long start = System.currentTimeMillis();
-		log.info("Query execution started");
-		jdbcTemplate.execute(query);
-		log.info("Query execution completed");
-		long end = System.currentTimeMillis();
-		log.info("Time taken to execute the query: {} minutes", (end - start) / 60000.0);
+		String query = queryService.getQuery();
+		System.out.println(query);
+		System.out.println(queryService.getDateCastingQuery());
+
+
+//		String query = readQueryFromFile();
+//		long start = System.currentTimeMillis();
+//		log.info("Query execution started");
+//		jdbcTemplate.execute(query);
+//		log.info("Query execution completed");
+//		long end = System.currentTimeMillis();
+//		log.info("Time taken to execute the query: {} minutes", (end - start) / 60000.0);
 	}
 
 	private String readQueryFromFile() throws IOException {
